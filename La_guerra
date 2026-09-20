@@ -1,0 +1,164 @@
+using System;
+using System.Linq;
+
+namespace guerra_chaco;
+
+public static class Program
+{
+    public static void Main()
+    {
+
+        int puntos = 0;
+
+        string opcion;
+        Console.WriteLine("========================");
+        Console.WriteLine("la guerra del chaco");
+        Console.WriteLine("=====================");
+
+        Console.WriteLine("año 1932 eres un soldado en la guerra en el chaco borean ");
+        Console.WriteLine("tus decisiones cambiaran tu destino ");
+
+        Console.WriteLine();
+
+        // decision 1 
+        Console.WriteLine("la decision ");
+        Console.WriteLine("tu peloton no tiene agua tu camarada Reyes esta desidratandose");
+        Console.WriteLine("(1) compartir tu agua");
+        Console.WriteLine("(2)guardarla para ti ");
+        Console.Write("elige 1 o 2 :");
+        opcion = Console.ReadLine();
+
+
+        if (opcion == "1")
+        {
+            puntos = puntos + 10;
+            Console.WriteLine("comparte el agua el peloton confia en ti ");
+        }
+        else
+        {
+            puntos = puntos - 10;
+            Console.WriteLine("guardas el agua .Reyes te mira y muere al tercer dia");
+
+        }
+        Console.WriteLine();
+        // honor 
+        Console.WriteLine("un compañero cae heridocerca de tibajo fuego enemogo");
+        Console.WriteLine("(1) arriesgarte y salvarlo");
+        Console.WriteLine("(2)quedarte en cubierta ");
+        Console.Write("elige 1 o 2 ");
+        opcion = Console.ReadLine();
+        if (opcion == "1")
+        {
+            puntos = puntos + 10;
+            Console.WriteLine("lo salvas ahora es tu amigo mas leal");
+        }
+        else
+        {
+            puntos = puntos - 10;
+            Console.WriteLine("te quedas a salvo tu compañero no sobrevive");
+
+        }
+
+
+
+        Console.WriteLine();
+
+        // el prisionero
+
+        Console.WriteLine("el pricionero");
+        Console.WriteLine("captura a un soldados enemigos");
+
+        Console.WriteLine("1)tratar bien y entregarlo como prisionero");
+        Console.WriteLine("2)obedecer la orden de eliminarlo");
+        Console.Write("elige 1 o 2 ");
+        opcion = Console.ReadLine();
+        if (opcion == "1")
+        {
+            puntos = puntos + 10;
+            Console.WriteLine("entregas al prisionero mantienes tu humanidad");
+        }
+        else
+        {
+            puntos = puntos - 10;
+            Console.WriteLine("obedecer la orden algo en ti se rompe");
+
+        }
+        Console.WriteLine();
+        // ultima batalla
+
+        Console.WriteLine("la decision final");
+        Console.WriteLine("el frete colapsa");
+        Console.WriteLine("1) quedarte a luchar con tu peloton ");
+        Console.WriteLine("2) desetar y huir");
+
+        if (opcion == "1")
+        {
+            puntos = puntos + 10;
+            Console.WriteLine("te quedas a luchar hasta el final");
+
+        }
+        else
+        {
+            puntos = puntos - 10;
+            Console.WriteLine("huye en la nochev");
+
+        }
+        Console.WriteLine();
+        // final
+
+        Console.WriteLine("=====================");
+        Console.WriteLine("final");
+        Console.WriteLine("=====================");
+        Console.WriteLine("puntos totales " + puntos);
+        Console.WriteLine();
+
+        if (puntos == 40)
+        {
+            Console.WriteLine("final herue del chaco");
+
+            Console.WriteLine("salvaste a tus compañeros rescataste al prisionero y no lp mataste");
+
+            Console.WriteLine("abandona a nadie .vuelves a tu pueblo como heruue ");
+            Console.WriteLine("los niños te piden qur cuenteza tu historias cada uno");
+
+
+
+        }
+        else if (puntos == 20)
+        {
+
+            Console.WriteLine("sobrevivir honesto");
+
+            Console.WriteLine("cometite un error que aun te pasa pero en genral");
+
+            Console.WriteLine("un buen compañero regresas a casa con la conciencia limpia");
+            Console.WriteLine("aunque con una historia dificil de contar");
+        }
+        else if (puntos == 0)
+        {
+            Console.WriteLine("soldado dividodo");
+            Console.WriteLine("tomaste las decisiones contrafictorias a veces pensaste en los demas aveces solo a ti .vuelves con vida pero nunca sabes  ");
+            Console.WriteLine("si hiciste lo correcto esa duda te acompañara siempre");
+        }
+        else if (puntos == -20)
+        {
+            Console.WriteLine("el superviviente frio");
+            Console.WriteLine("priorizaste tu supervivencia casi todo el tiempo logras volver con vida pero ");
+            Console.WriteLine("muchos de tu camaradas murieron suerte y algunos vuelvan asus casas pero nunca seras perdonado ni por ti ni por ellos");
+        }
+
+        else if (puntos == -40)
+        {
+            Console.WriteLine("dejaste morir a tus camaradas priorisaste tu supervivencia");
+            Console.WriteLine("obedeciste ordenes crueles que no cumplen tus valores ");
+            Console.WriteLine("escapastes como cobarde escapaste a santa cruz fuiste un bagabundo sin un objetivo claro");
+        }
+
+
+
+        Console.WriteLine();
+        Console.WriteLine("graciaspor por juego");
+    }
+}
+
+
